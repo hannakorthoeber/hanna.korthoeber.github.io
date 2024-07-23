@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anfahrt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Schreinerei Hanswurst</h1>
+    </header>
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="dienstleistungen.html">Dienstleistungen</a>
+        <a href="zeiten.html">Geschäftszeiten</a>
+        <a href="produkte.html">Produkte</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="anfahrt.html">Anfahrt</a>
+        <a href="impressum.html">Impressum</a>
+    </nav>
+ <div class="container">
+        <h2>Anfahrtsbeschreibung zur Schreinerei Hans Wurst</h2>
+        <p><strong>Adresse:</strong><br>
+            Schreinerei Hans Wurst<br>
+            Holzweg 15<br>
+            12345 Schreinerstadt
+        </p>
+        <h3>Mit dem Auto:</h3>
+        <p><strong>Von Norden kommend:</strong></p>
+        <ul>
+            <li>Fahren Sie auf der Autobahn A1 Richtung Süden und nehmen Sie die Ausfahrt 45-Schrreinerstadt Nord.</li>
+            <li>Folgen Sie der B123 für etwa 5 km und biegen Sie rechts auf die Holzstraße ab.</li>
+            <li>Fahren Sie geradeaus weiter und biegen Sie nach 2 km links auf den Holzweg ab.</li>
+            <li>Die Schreinerei Hans Wurst befindet sich nach 500 m auf der rechten Seite.</li>
+        </ul>
+        <p><strong>Von Süden kommend:</strong></p>
+        <ul>
+            <li>Fahren Sie auf der Autobahn A1 Richtung Norden und nehmen Sie die Ausfahrt 46-Schreinerstadt Süd.</li>
+            <li>Folgen Sie der B124 für etwa 4 km und biegen Sie links auf die Werkstraße ab.</li>
+            <li>Fahren Sie geradeaus weiter und biegen Sie nach 3 km rechts auf den Holzweg ab.</li>
+            <li>Die Schreinerei Hans Wurst befindet sich nach 200 m auf der linken Seite.</li>
+        </ul>
+        <h3>Mit öffentlichen Verkehrsmitteln:</h3>
+        <p><strong>Vom Hauptbahnhof Schreinerstadt:</strong></p>
+        <ul>
+            <li>Nehmen Sie die Buslinie 25 in Richtung "Holzpark".</li>
+            <li>Steigen Sie an der Haltestelle "Holzweg Mitte" aus.</li>
+            <li>Gehen Sie 300 m in westlicher Richtung auf dem Holzweg weiter.</li>
+            <li>Die Schreinerei Hans Wurst befindet sich auf der rechten Seite.</li>
+        </ul>
+        <p><strong>Vom Flughafen Schreinerstadt:</strong></p>
+        <ul>
+            <li>Nehmen Sie die S-Bahn Linie S3 Richtung "Schreinerstadt Zentrum".</li>
+            <li>Steigen Sie an der Station "Holzstraße" aus.</li>
+            <li>Wechseln Sie zur Buslinie 25 in Richtung "Holzpark".</li>
+            <li>Steigen Sie an der Haltestelle "Holzweg Mitte" aus.</li>
+            <li>Gehen Sie 300 m in westlicher Richtung auf dem Holzweg weiter.</li>
+            <li>Die Schreinerei Hans Wurst befindet sich auf der rechten Seite.</li>
+        </ul>
+        <h3>Parkmöglichkeiten:</h3>
+        <p>Direkt vor der Schreinerei Hans Wurst befinden sich Kundenparkplätze. Zusätzliche Parkmöglichkeiten finden Sie in der Holzstraße, nur wenige Gehminuten entfernt.</p>
+        <p>Wir freuen uns auf Ihren Besuch und stehen Ihnen bei Fragen gerne zur Verfügung!</p>
+    </div>
+        <div class="container">
+        <h2>Google Maps Karte</h2>
+        <div class="address">
+            <p><strong>Adresse:</strong><br>
+            Schreinerei Hans Wurst<br>
+            Holzweg 15<br>
+            12345 Schreinerstadt
+        </div>
+        <div id="map"></div>
+    </div>
+    <script>
+        function initMap() {
+            var location = { lat: 51.505, lng: -0.09 }; // Beispielkoordinaten, ändere diese entsprechend
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: location
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Musterstraße 123, 12345 Musterstadt'
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: '<h2>Fiktive Adresse</h2><p>Musterstraße 123, 12345 Musterstadt</p>'
+            });
+
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <footer>
+        <p>&copy; 2024 Schreinerei Hans Wurst</p>
+    </footer>
+</body>
+</html>
